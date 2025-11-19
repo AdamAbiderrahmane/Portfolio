@@ -1,8 +1,31 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello PortfolioController!{% endblock %}
+{% block title %}Portfolio{% endblock %}
 
 {% block body %}
+<h1>Mon E-Portfolio de Compétences</h1>
+<p>
+    Voici une sélection de mes compétences accompagnées d’auto-évaluations
+    et de preuves issues de mon parcours de formation.
+</p>
+
+<div class="card mt-4 p-3">
+    <h3>Compétence : Administration Réseau</h3>
+    <p>Auto-évaluation : 2/4</p>
+    <p>Preuves : projets Cisco, TP VLAN, etc.</p>
+</div>
+
+<div class="card mt-4 p-3">
+    <h3>Compétence : Sécurité Informatique</h3>
+    <p>Auto-évaluation : 2/4</p>
+    <p>Preuves : TP pare-feu, filtrages, etc.</p>
+</div>
+
+<div class="card mt-4 p-3">
+    <h3>Compétence : Développement Web</h3>
+    <p>Auto-évaluation : 3/4</p>
+    <p>Preuves : ce site Symfony, projets HTML/CSS/JS…</p>
+</div>
 <style>
     .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
     .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
