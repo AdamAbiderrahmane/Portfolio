@@ -3,39 +3,219 @@
 {% block title %}Mon CV{% endblock %}
 
 {% block body %}
-<h1 class="text-center">Apprenti Technicien Réseaux & Télécommunications</h1>
+<div class="cv-container">
+    <header class="cv-header">
+        <h1>ADMINISTRATEUR RESEAUX</h1>
+    </header>
 
-<hr>
+    <div class="cv-layout">
+        <!-- Colonne gauche -->
+        <aside class="cv-sidebar">
+            <section class="cv-bloc">
+                <h2>Informations personnelles</h2>
+                <ul>
+                    <li><strong>Nom/Prénom :</strong> ABIDERRAHMANE ADAM</li>
+                    <li><strong>Email :</strong> abiderrahmane.adam@gmail.com</li>
+                    <li><strong>Téléphone :</strong> 06 56 68 97 13</li>
+                    <li><strong>Localisation :</strong> Lyon/Roanne</li>
+                </ul>
+            </section>
 
-<h2>Formations</h2>
-<ul>
-    <li>IUT Réseaux et Télécommunications</li>
-    <li>Autres formations…</li>
-</ul>
+            <section class="cv-bloc">
+                <h2>Activité et centre d'intérêt</h2>
+                  <ul>
+                    <li><strong>Sport :</strong>Basketball, Football, Volleyball, Echecs</li>
+                    <li><strong>Passe-temps</strong>Animes, Musique</li>
+                    <li><strong>Apprentissage</strong>réseaux, programmation(python,SQL,HTML/CSS) en cours</li>
+                </ul>
+            </section>
 
-<h2>Expériences Professionnelles</h2>
-<ul>
-    <li>Stage / job étudiant / projets…</li>
-</ul>
+            <section class="cv-bloc">
+                <h2>Langue</h2>
+                <ul>
+                    <li><strong>Français :</strong> Langue maternelle</li>
+                    <li><strong>Anglais :</strong> Niveau B1</li>
+                    <li><strong>Allemand :</strong> Niveau A2</li>
+                    <li><strong>Arabe :</strong> Niveau A2</li>
+                </ul>
+            </section>
 
-<h2>Compétences</h2>
-<ul>
-    <li>Réseaux : TCP/IP, VLAN, routage, etc.</li>
-    <li>Linux / Windows Server</li>
-    <li>Développement web…</li>
-</ul>
+            <section class="cv-bloc">
+                <h2>Disponibilités</h2>
+                <p>Disponible immédiatement en alternance</p>
+            </section>
+        </aside>
+
+        <!-- Colonne droite -->
+        <main class="cv-main">
+            <section class="cv-bloc">
+                <h2>Profil</h2>
+                <p>
+                    Etudiant en première année à l’I.U.T de Roanne en BUT réseaux et télécommunication et titulaire du baccalauréat 2025. Je suis à la recherche d’une alternance.
+                    Je suis motivé, je cherche à m’initier dans le monde du travail tout au long de l’année dans un poste stimulant en 2026-2027.
+                </p>
+            </section>
+
+            <section class="cv-bloc">
+                <h2>Compétences</h2>
+                <div class="competences-grid">
+                    <div class="competence-bloc">
+                        <h3>Administrer niveau niveau 1</h3>
+                        <ul>
+                            <li>Installer, configurer et maintenir des serveurs (Linux/Windows)</li>
+                            <li>Gérer des services réseau (DNS, DHCP, HTTP, FTP…)</li>
+                            <li>Mettre en place des solutions virtualisées ou containerisées (VM)</li>
+                        </ul>
+                    </div>
+
+                    <div class="competence-bloc">
+                        <h3>Programmer niveau 1</h3>
+                        <ul>
+                            <li>HTML/CSS</li>
+                            <li>PHP, Symfony</li>
+                            <li>Python</li>
+                            <li>SQL</li>
+                        </ul>
+                    </div>
+
+                    <div class="competence-bloc">
+                        <h3>Connecter niveau 1</h3>
+                        <ul>
+                            <li>Architecture réseau linux (Samba, NFS)</li>
+                            <li>Installer et configurer des réseaux locaux (LAN, VLAN)</li>
+                            <li>connecter switch 2960, VLAN, IpV4, ipV6</li>
+                        </ul>
+                    </div>
+                    <div class="competence-bloc">
+                        <h3>Autres</h3>
+                        <ul>
+                            <li>Maîtrise du pack office Microsoft, 2007, Word, Excel, powerPoint</li>
+                            <li>Adaptation aux changement rapide(dont les outils numériques)</li>
+                            <li>Auto-gestion du temps et des priorités</li>
+                            <li>Proactif dans la résolution de problème</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section class="cv-bloc">
+                <h2>Formations</h2>
+                <div class="timeline-item">
+                    <h3>BUT Réseaux et Télécommunications</h3>
+                    <p class="date">2025 jusqu'à 2027</p>
+                    <p>- IUT Réseaux et Télécommunications</p>
+
+                    <h3>Lycée La Martinière Diderot, Terminale générale</h3>
+                    <p class="date">2023-2025</p>
+                    <p>- Baccalauréat</p>
+
+                    <h3>Collège Jules Michelet</h3>
+                    <p class="date">2021-2022</p>
+                    <p>- Brevet des collèges (mention bien)</p>
+
+                    <h2>Expériences professionelles</h2>
+                    <p>- Membre de la Commission contre le harcèlement </p>
+                    <p>- Cordées de la réussite</p>
+                    <p>- Stage de 3éme chez AVEM (entreprise experte en monétique et en service)</p>
+                    <p>- Médiateur en CM2</p>
+                    <p>- Engagement association course contre la faim</p>
+                </div>
+            </section>
+
+            <section class="cv-bloc">
+                <h2>Savoir être</h2>
+                <div class="Bagages-de-competence">
+                    <span class="competences">Esprit curieux et soif d’apprendre en continu</span>
+                    <span class="competences">Ponctuel, sérieux, sens du collectif et de l’écoute active</span>
+                    <span class="competences">Tempérament calme, capable de garder une maîtrise de soi inébranlable dans les situations stressantes</span>
+                    <span class="competences">Sortir de ma zone de confort et déterminer,goût du défi et de l’inconnu</span>
+                </div>
+            </section>
+        </main>
+    </div>
+</div>
 
 <style>
-    .example-wrapper { 
-        margin: 1em auto; 
-        max-width: 800px; 
-        width: 95%; 
-        font: 18px/1.5 sans-serif; 
-    }
-    .example-wrapper code { 
-        background: #F5F5F5; 
-        padding: 2px 6px; 
+    .cv-container {
+        margin: 2em auto;
+        font-family: sans-serif;
     }
 
+    .cv-header {
+        text-align: center;
+        padding: 2em 0;
+        border-bottom: 3px solid #ff5a13;
+        margin-bottom: 2em;
+    }
+
+    .cv-header h1 {
+        color: #2c3e50;
+        font-size: 2em;
+        margin: 0;
+    }
+
+    .cv-layout {
+        display: grid;
+        grid-template-columns: 500px 1fr;
+        gap: 2em;
+    }
+
+    .cv-sidebar {
+        background: #f8f9fa;
+        padding: 1.5em;
+        border-radius: 8px;
+    }
+
+    .cv-bloc {
+        margin-bottom: 2em;
+        padding: 1.5em;
+        background: white;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .cv-bloc h2 {
+        color: #2c3e50;
+        font-size: 1.3em;
+        margin-bottom: 1em;
+        padding-bottom: 0.5em;
+        border-bottom: 2px solid #f64b12;
+        text-transform: uppercase;
+        font-weight: 700;
+    }
+
+    .cv-bloc h3 {
+        color: #34495e;
+        font-size: 1.1em;
+        margin-bottom: 0.5em;
+    }
+
+    .cv-bloc ul li {
+        padding: 0.4em 0;
+        padding-left: 1.5em;
+        position: relative;
+    }
+
+    .competences-grid {
+        display: grid;
+        gap: 1.5em;
+    }
+
+    .competence-bloc {
+        background: #f8f9fa;
+        padding: 1em;
+        border-radius: 6px;
+        border-left: 4px solid #000000;
+    }
+
+    .Bagages-de-competence {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .competences {
+        color: rgb(0, 0, 0);
+        padding: 0.5em 1em;
+    }
 </style>
 {% endblock %}
