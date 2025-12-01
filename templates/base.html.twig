@@ -2,55 +2,66 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>{% block title %}Mon site - BUT RT{% endblock %}</title>
+    <title>{% block title %}Mon site{% endblock %}</title>
 
     <!-- Thème Bootswatch Ubuntu-like (United) -->
     <link rel="stylesheet" href="https://bootswatch.com/5/united/bootstrap.min.css">
-
     <!-- Style perso : orange Ubuntu -->
     <style>
-        .bg-primary,
-        .table-primary,
-        .btn-primary,
-        .alert-primary,
         .text-primary {
-            background-color: #ffffff !important; /* blanc */
-            color: #000000 !important; /* texte noir */
+            background-color: #ffffff; /* blanc */
+            color: #000000 ; /* texte noir */
         }
 
         .border-primary {
-            border-color: #ffffff !important;
+            border-color: #ffffff;
         }
 
         .text-primary {
-            color: #000000 !important;
+            color: #000000 ;
         }
 
-        a {
-            color: #E95420; /* orange Ubuntu */
+        .container {
+            color: #000000 ;
         }
 
+        .a {
+            color: #ffffff; /* orange Ubuntu */
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            background-color: rgb(255, 255, 255);
+            color: #f5f5f5;
+        }
+        header {
+            background-color: #ffffff;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        nav a:hover {
+            background-color: #FAFAD2;
+            border-radius: 5px;
+        }
         a:hover {
             color: #c3411a; /* orange foncé */
         }
 
-        body {
-            background-color: #f8f9fa; /* fond gris clair */
-        }
-
         .navbar {
-            background-color: #E95420 !important; /* orange Ubuntu */
+            background-color: #E95420; /* orange Ubuntu */
         }
 
         .navbar-brand, 
         .nav-link {
-            color: white !important;
+            color: white;
             font-weight: 500;
         }
 
         .navbar-brand:hover, 
         .nav-link:hover {
-            color: #ffe6d5 !important; /* blanc légèrement orangé */
+            color: #ffe6d5;
         }
 
         footer {
@@ -101,7 +112,7 @@
     </nav>
 
     <!-- CONTENU DES PAGES -->
-    <div class="container mt-4">
+    <div class="container">
         {% block body %}{% endblock %}
     </div>
 
