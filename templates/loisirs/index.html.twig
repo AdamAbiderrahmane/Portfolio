@@ -1,27 +1,61 @@
+
 {% extends 'base.html.twig' %}
 
-{% block title %}Mes loisirs{% endblock %}
+{% block title %}Contact{% endblock %}
 
 {% block body %}
-<h1>Mes Loisirs</h1>
-<p>Voici quelques photos représentant mes passions.</p>
 
-<div class="photo">
+<div class="formulaire-container">
+    <form>
+        <fieldset>
+            <legend>Formulaire d'inscription</legend>
+            
+            <div>
+                <label for="nom" class="form-label">Nom</label>
+                <input type="text" class="form-control" id="nom" placeholder="Entrez votre Nom...">
+            </div>
+            
+            <div>
+                <label for="prenom" class="form-label">Prénom</label>
+                <input type="text" class="form-control" id="prenom" placeholder="Entrez votre Prénom...">
+            </div>
+            
+            <div>
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" placeholder="XX@gmail.com">
+            </div>
+            
+            <div>
+                <label for="telephone" class="form-label">Téléphone</label>
+                <input type="tel" class="form-control" id="telephone" placeholder="+ 33 XX XX XX XX">
+            </div>
+            
+            <div>
+                <label for="cv" class="form-label">CV (PDF ou DOCX)</label>
+                <input class="form-control" type="file" id="cv" accept=".pdf,.docx">
+            </div>
+            
+            <button type="submit" class="btn btn-primary">Envoyer l'inscription</button>
+        </fieldset>
+    </form>
+</div>
 
-    <div class="image">
-        <img src="/images/loisir1.jpg" class="img-fluid rounded shadow">
-        <p class="text-center mt-2">Loisir 1</p>
 <style>
-    .photo { 
-        margin: 1em auto; 
-        max-width: 800px; 
-        width: 95%; 
-        font: 18px/1.5 sans-serif; 
+    .formulaire-container {
+        max-width: 700px;
+        margin: 3em auto;
+        padding: 20px;
     }
-    .image { 
-        background: #F5F5F5; 
-        padding: 2px 6px; 
+    
+    fieldset {
+        border: none;
     }
-
+    
+    legend {
+        font-size: 2rem;
+        font-weight: bold;
+        margin-bottom: 1.5rem;
+    }
 </style>
+
 {% endblock %}
