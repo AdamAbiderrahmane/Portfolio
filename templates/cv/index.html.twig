@@ -8,16 +8,51 @@
         <h1>ADMINISTRATEUR RESEAUX</h1>
     </header>
 
+    <div class="formulaire-container">
+    <form>
+        <fieldset>
+            <legend>Formulaire d'inscription</legend>
+            
+            <div>
+                <label for="nom" class="form-label">Nom</label>
+                <input type="text" class="form-control" id="nom" placeholder="Entrez votre Nom...">
+            </div>
+            
+            <div>
+                <label for="prenom" class="form-label">Prénom</label>
+                <input type="text" class="form-control" id="prenom" placeholder="Entrez votre Prénom...">
+            </div>
+            
+            <div>
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" placeholder="XX@gmail.com">
+            </div>
+            
+            <div>
+                <label for="telephone" class="form-label">Téléphone</label>
+                <input type="tel" class="form-control" id="telephone" placeholder="+ 33 XX XX XX XX">
+            </div>
+            
+            <div>
+                <label for="cv" class="form-label">CV (PDF ou DOCX)</label>
+                <input class="form-control" type="file" id="cv" accept=".pdf,.docx">
+            </div>
+            
+            <button type="submit" class="btn btn-primary">Envoyer l'inscription</button>
+        </fieldset>
+    </form>
+</div>
+
     <div class="cv-layout">
         <!-- Colonne gauche -->
         <aside class="cv-sidebar">
             <section class="cv-bloc">
                 <h2>Informations personnelles</h2>
                 <ul>
-                    <li><strong>Nom/Prénom :</strong> ABIDERRAHMANE ADAM</li>
-                    <li><strong>Email :</strong> abiderrahmane.adam@gmail.com</li>
-                    <li><strong>Téléphone :</strong> 06 56 68 97 13</li>
-                    <li><strong>Localisation :</strong> Lyon/Roanne</li>
+                    <li><strong>Nom/Prénom :</strong> ABIDERRAHMANE ADAM </li>
+                    <li><strong>Email :</strong> abiderrahmane.adam@gmail.com </li>
+                    <li><strong>Téléphone :</strong> 06 56 68 97 13 </li>
+                    <li><strong>Localisation :</strong> Lyon/Roanne </li>
                 </ul>
             </section>
 
@@ -216,6 +251,22 @@
     .competences {
         color: rgb(0, 0, 0);
         padding: 0.5em 1em;
+    }
+
+    .formulaire-container {
+        max-width: 700px;
+        margin: 3em auto;
+        padding: 20px;
+    }
+    
+    fieldset {
+        border: none;
+    }
+    
+    legend {
+        font-size: 2rem;
+        font-weight: bold;
+        margin-bottom: 1.5rem;
     }
 </style>
 {% endblock %}
