@@ -7,61 +7,16 @@
     <h1 class="text-center">Welcome to my personal website</h1>
 
     <p class="text-center">
-        My name is Adam, my group is B1 and iIam a student in networking and telecommunications.
+        My name is Adam, my group is B1 and I am a student in networking and telecommunications.
     </p>
 
     <div class="card">
         <h2 class="text-center">Learn more</h2>
-        <p class="text-center">Discover my hobbies, passions, goals and projects.</p>
-        
-        <div class="container-boostwatch">
-            <div class="card text-white bg-primary" style="max-width: 20rem;">
-                <div class="card-header">Hobbies</div>
-                <div class="card-body">
-                    <h4 class="card-title">My Hobbies</h4>
-                    <ul class="text-start">
-                        <li>Sports</li>
-                        <li>Social networks (instagram)</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="card text-white bg-primary" style="max-width: 20rem;">
-                <div class="card-header">Passions</div>
-                <div class="card-body">
-                    <h4 class="card-title">My Passions</h4>
-                    <ul class="text-start">
-                        <li>Networks</li>
-                        <li>Cybersecurity</li>
-                        <li>Web development</li>
-                        <li>Chess</li>
-                    </ul>
-                </div>
-            </div>
-            
-            <div class="card text-white bg-primary" style="max-width: 20rem;">
-                <div class="card-header">Goals</div>
-                <div class="card-body">
-                    <h4 class="card-title">My Goals</h4>
-                    <ul class="text-start">
-                        <li>Certifications</li>
-                    </ul>
-                </div>
-            </div>
-            
-            <div class="card text-white bg-primary" style="max-width: 20rem;">
-                <div class="card-header">Projects</div>
-                <div class="card-body">
-                    <h4 class="card-title">My Projects</h4>
-                    <ul class="text-start">
-                        <li>Portfolio</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
         
         <div class="text-center">
-            <button type="button" class="btn btn-primary">Pour en savoir plus</button>
+            <a href="loisirs">
+                <button type="button" class="btn btn-primary">Pour en savoir plus</button>
+            </a>
         </div>
     </div>
 </div>
@@ -70,16 +25,19 @@
     /* Container pour les cadres */
     .container-boostwatch {
         display: flex;
-        gap: 20px;
-        margin: 30px 0;
+        gap: 60px;
+        margin: 80px 0;
         flex-wrap: wrap;
         justify-content: center;
     }
-
-    /* Alignement des listes à gauche dans les cartes */
-    .card ul {
-        padding-left: 20px;
+    
+    .card {
+        background-color: white;
+        padding: 50px;
+        border-radius: 15px;
+        margin-top: 30px;
     }
-/*Il manque les photos avec mes loisirs après être entrée dans en savoir plus + photo de ma tête dans l'accueil*/
+    
+    /*photo de ma tête dans l'accueil*/
 </style>
 {% endblock %}

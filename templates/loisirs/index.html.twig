@@ -3,5 +3,56 @@
 {% block title %}Mes Loisirs{% endblock %}
 
 {% block body %}
+<div class="container">
+    <h1 class="text-center mt-4">Mes intérêts</h1>
+    <p class="text-center text-muted">Découvrez un autre monde en moi ! </p>
+    
+    <div class="card border-primary">
+        <h3 class="card-header bg-primary text-white">Mes loisirs</h3>
+        <img src="{{ asset('images/Mes_sports.jpg') }}" class="card-img-top img-card" alt="Hobbies" width="300">
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">Le foot-ball</li>
+            <li class="list-group-item">Le basket-ball</li>
+            <li class="list-group-item">Le volley-ball</li>
+            <li class="list-group-item">L'athlétisme</li>
+        </ul>
+    </div>
+
+    <div class="card border-primary">
+        <h3 class="card-header bg-primary text-white">Mes passions</h3>
+        <img src="{{ asset('images/Mes_passions.jpg') }}" class="card-img-top img-card" alt="Passions">
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">Le réseaux</li>
+            <li class="list-group-item">Les sites internets</li>
+            <li class="list-group-item">Les echecs</li>
+        </ul>
+    </div>
+
+    <div class="card border-primary">
+        <h3 class="card-header bg-primary text-white">Mes objectifs</h3>
+        <img src="{{ asset('images/Mes_objectifs.jpg') }}" class="card-img-top img-card" alt="Goals">
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">Certifications réseaux : (CCNA,CCNP)</li>
+            <li class="list-group-item">Certifications en cybersécurité : (CompTIA Security+, Pentest+)</li>
+            <li class="list-group-item">Certifications en Cloud : (Azure Administrator,Google Cloud Associate)</li>
+            <li class="list-group-item">Code et permis de conduire</li>
+        </ul>
+    </div>
+
+    <div class="card border-primary">
+        <h3 class="card-header bg-primary text-white">Mes projets</h3>
+        <img src="{{ asset('images/Mes_projets.jpg') }}" class="card-img-top img-card" alt="Projects">
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">Mon Portfolio</li>
+        </ul>
+    </div>
+</div>
+
+<style>
+    .img-card {
+        height: 400px;
+        object-fit: cover;
+    }
+</style>
 
 {% endblock %}
