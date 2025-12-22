@@ -11,6 +11,8 @@
     </p>
 
     <div class="card">
+        <img src="{{ asset('images/mon_visage_anime.webp') }}" class="tete-adam" alt="tête_Adam">
+        
         <h2 class="text-center">Learn more</h2>
         
         <div class="text-center">
@@ -18,19 +20,24 @@
                 <button type="button" class="btn btn-primary">Pour en savoir plus</button>
             </a>
         </div>
+
+        <div class="social-links">
+            <a href="https://www.instagram.com/a.d.m._.69?igsh=MTA5endvNzhnd3U2ZQ==" target="_blank">
+                <img src="{{ asset('images/logo_instagram.png') }}" alt="Instagram" class="social-logo">
+            </a>
+            
+            <a href="https://github.com/AdamAbiderrahmane" target="_blank">
+                <img src="{{ asset('images/logo_github.jpg') }}" alt="GitHub" class="social-logo">
+            </a>
+            
+            <a href="https://www.linkedin.com/public-profile/settings/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3B8qkZF7DaTd25%2FqPeph2t8Q%3D%3D" target="_blank">
+                <img src="{{ asset('images/logo_linkedin.png') }}" alt="LinkedIn" class="social-logo">
+            </a>
+        </div>
     </div>
 </div>
 
 <style>
-    /* Container pour les cadres */
-    .container-boostwatch {
-        display: flex;
-        gap: 60px;
-        margin: 80px 0;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-    
     .card {
         background-color: white;
         padding: 50px;
@@ -38,6 +45,24 @@
         margin-top: 30px;
     }
     
-    /*photo de ma tête dans l'accueil*/
+    .tete-adam {
+        width: 150px;
+        height: 150px; 
+        border-radius: 100%; 
+        display: block; 
+        margin: 0 auto 20px;
+    }
+    
+    .social-links {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        margin-top: 30px;
+    }
+    
+    .social-logo {
+        width: 40px;
+        height: 40px;
+    }
 </style>
 {% endblock %}

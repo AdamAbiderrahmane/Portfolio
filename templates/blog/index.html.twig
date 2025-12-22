@@ -3,6 +3,41 @@
 {% block title %}Hello BlogController!{% endblock %}
 
 {% block body %}
+
+    <div class="formulaire-container">
+    <form>
+        <fieldset>
+            <legend>Formulaire d'inscription</legend>
+            
+            <div>
+                <label for="nom" class="form-label">Nom</label>
+                <input type="text" class="form-control" id="nom" placeholder="Entrez votre Nom...">
+            </div>
+            
+            <div>
+                <label for="prenom" class="form-label">Prénom</label>
+                <input type="text" class="form-control" id="prenom" placeholder="Entrez votre Prénom...">
+            </div>
+            
+            <div>
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" placeholder="XX@gmail.com">
+            </div>
+            
+            <div>
+                <label for="telephone" class="form-label">Téléphone</label>
+                <input type="tel" class="form-control" id="telephone" placeholder="+ 33 XX XX XX XX">
+            </div>
+            
+            <div>
+                <label for="cv" class="form-label">CV (PDF ou DOCX)</label>
+                <input class="form-control" type="file" id="cv" accept=".pdf,.docx">
+            </div>
+            
+            <button type="submit" class="btn btn-primary">Envoyer l'inscription</button>
+        </fieldset>
+    </form>
+</div>
 <style>
     .example-wrapper { 
         margin: 1em auto; 
