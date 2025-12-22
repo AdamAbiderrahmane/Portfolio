@@ -3,41 +3,198 @@
 {% block title %}Portfolio{% endblock %}
 
 {% block body %}
-<h1>Mon E-Portfolio de Compétences</h1>
-<p>
-    Voici une sélection de mes compétences accompagnées d’auto-évaluations
-    et de preuves issues de mon parcours de formation.
-</p>
+<div class="container conteneur">
+    <h1 class="display-4">Mon E-Portfolio de Compétences</h1>
+    <p class="lead">
+        Découvrez mes compétences acquises durant ma formation en BUT Réseaux et Télécommunications, 
+        accompagnées d'auto-évaluations et de preuves concrètes de mon parcours.
+    </p>
 
-<div class="mini-carte-Administrer">
-    <h3>Compétence : Administrer</h3>
-    <p>Auto-évaluation : 2/4</p>
-    <p>Preuves : projets Cisco, TP VLAN, etc.</p>
+    <ul class="nav nav-tabs onglets" role="tablist">
+        <li class="nav-item" role="presentation">
+            <a class="nav-link active" data-bs-toggle="tab" href="#administrer" aria-selected="true" role="tab">Administrer</a>
+        </li>
+        <li class="nav-item" role="presentation">
+            <a class="nav-link" data-bs-toggle="tab" href="#connecter" aria-selected="false" role="tab">Connecter</a>
+        </li>
+        <li class="nav-item" role="presentation">
+            <a class="nav-link" data-bs-toggle="tab" href="#programmer" aria-selected="false" role="tab">Programmer</a>
+        </li>
+    </ul>
+
+    <div id="moncontenu" class="tab-content contenu-onglets mt-4">
+    
+        <div class="tab-pane fade show active competence" id="administrer" role="tabpanel">
+            <h3>Compétence : Administrer des réseaux et des services</h3>
+            
+            <div class="auto-evaluation my-4">
+                <h5>Auto-évaluation : Niveau 2/4 - En développement</h5>
+                <div class="progress barre-progression" style="height: 25px;">
+                    <div class="progress-bar" role="progressbar" style="width: 50%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">2/4</div>
+                </div>
+                <p class="mt-2">Configuration d'équipements réseau, installation de systèmes d'exploitation (Linux/Windows), diagnostic de dysfonctionnements.</p>
+            </div>
+
+            <div class="card carte mb-4">
+                <div class="card-header tete-carte"><strong>Ce que j'ai réalisé</strong></div>
+                <div class="card-body corps-carte">
+                    <ul>
+                        <li><strong>AC11.01 </strong> Maîtriser les lois fondamentales de l'électricité afin d'intervenir sur des équipements de réseaux et télécommunications</li>
+                        <p>Clavier numérique et led à touche, via microcontroleur Arduino Uno :</p>
+                    <img src="{{ asset('images/pour_Administrer/Microcontroleur_arduino_uno.png') }}" alt="Electronique" class="photo">
+                    <p>Thermomètre connecté sur le Web via microncontroleur ESP32 :</p>
+                    <img src="{{ asset('images/pour_Administrer/Microcontroleur_ESP32.png') }}" alt="Electronique" class="photo">
+                        <li><strong>AC11.02</strong> Comprendre l'architecture et les fondements des systèmes numériques, les principes du codage de l'information, des communications et de l'Internet</li>
+                        <p>Analyse d'une trame Wireshark : </p>
+                    <img src="{{ asset('images/pour_Administrer/Maitrise_de_wireshark.png') }}" alt="Reseau" class="photo">
+                    <p>Mecanisme d'encapsulation :</p>
+                    <img src="{{ asset('images/pour_Administrer/Mecanisme_d_encapsulation.png') }}" alt="Reseau" class="photo">
+                    <p>Modele OSI :</p>
+                    <img src="{{ asset('images/pour_Administrer/Modele_OSI.png') }}" alt="Resau" class="photo">
+                    <p>Modele TCP/IP :</p>
+                    <img src="{{ asset('images/pour_Administrer/Modele_TCP_IP.png') }}" alt="Reseau" class="photo">
+                        <li><strong>AC11.03</strong> Configurer les fonctions de base du réseau local</li>
+                        <p>Configuration entière d'un réseau : </p>
+                    <img src="{{ asset('images/pour_Administrer/Configuration_d_un_reseau.png') }}" alt="Reseau" class="photo">
+                        <li><strong>AC11.04</strong> Maîtriser les rôles et les principes fondamentaux des systèmes d'exploitation afin d'interagir avec ceux-ci pour la configuration et l'administration des réseaux et services fournis</li>
+                        <p>Environnement linux :</p>
+                    <img src="{{ asset('images/pour_Administrer/Environnement_linux.png') }}" alt="Systeme_exploitation" class="photo">
+                    <p>Maitrise des différents services client/serveur :</p>
+                    <img src="{{ asset('images/pour_Administrer/Maitrise_des_services_client_serveur.png') }}" alt="Systeme_exploitation" class="photo">
+                        <li><strong>AC11.06</strong> Installer un poste client, expliquer la procédure mise en place</li>
+                        <p>Installer un poste client : </p>
+                        <img src="{{ asset('images/pour_Administrer/Installation_poste_client.png') }}" alt="Systeme_exploitation" class="photo">
+                    <img src="{{ asset('images/pour_Administrer/Environnement_linux.png') }}" alt="Systeme_exploitation" class="photo">
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card text-white bg-primary carte-reflexive mb-3">
+                <div class="card-header tete-carte">Mon Analyse Réflexive sur la compétence ADMINISTRER</div>
+                <div class="card-body corps-carte">
+                    <p class="card-text">
+                        J’ai travaillé sur de l’électronique avec Arduino et ESP32, ce qui m’a permis de comprendre les bases de l’électricité et le lien entre matériel et logiciel.
+                        J’ai appris à programmer en C sur microcontrôleur et à diagnostiquer des problèmes sur des montages.
+                        J’ai compris le fonctionnement des réseaux : modèles OSI/TCP-IP, TCP vs UDP, encapsulation et rôle des protocoles.
+                        J’ai configuré des réseaux LAN avec Cisco Packet Tracer (IP, ping, masque de sous-réseau).
+                        J’ai renforcé mes bases en systèmes d’exploitation, surtout Linux, et mis en place des environnements client/serveur en machines virtuelles.
+                        Aujourd’hui, je suis plus autonome techniquement et je comprends ce que je fais, du matériel jusqu’au réseau.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="tab-pane fade competence" id="connecter" role="tabpanel">
+            <h3>Compétence : Connecter des entreprises et des usagers</h3>
+            
+            <div class="auto-evaluation my-4">
+                <h5>Auto-évaluation : Niveau 2/4 - En développement</h5>
+                <div class="progress barre-progression" style="height: 25px;">
+                    <div class="progress-bar" role="progressbar" style="width: 50%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">2/4</div>
+                </div>
+                <p class="mt-2">Maîtrise des systèmes de transmission, câblage réseau (cuivre/fibre).</p>
+            </div>
+
+            <div class="card carte mb-4">
+                <div class="card-header tete-carte"><strong>Ce que j'ai réalisé</strong></div>
+                <div class="card-body corps-carte">
+                    <ul>
+                        <li><strong>AC12.01</strong> Mesurer et analyser les signaux</li>
+                        <p>Mesure des signaux via l’oscilloscope et montage éléctronique : </p>
+                    <img src="{{ asset('images/pour_connecter/Mesures_sigaux_oscilloscope_montage_electronique.png') }}" alt="Electronique" class="photo">
+                    <p>Mesure tensions via multimètre :</p>
+                    <img src="{{ asset('images/pour_connecter/Mesure_tension_multimetre.png') }}" alt="Electronique" class="photo">
+                        <li><strong>AC12.02</strong> Caractériser des systèmes de transmissions élémentaires et découvrir la modélisation mathématique de leur fonctionnement</li>
+                        <p>Déphasage sur Proteus : </p>
+                    <img src="{{ asset('images/pour_connecter/Dephasage_proteus.png') }}" alt="Mathématique" class="photo">
+                        <li><strong>AC12.03</strong> Déployer des supports de transmission</li>
+                        <p>Câblage cuivre : </p>
+                    <img src="{{ asset('images/pour_connecter/Cablage_cuivre.png') }}" alt="Câblage" class="photo">
+                    <p>Test câblage : </p>
+                    <img src="{{ asset('images/pour_connecter/Test_cablage.png') }}" alt="Câblage" class="photo">
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card text-white bg-primary carte-reflexive mb-3">
+                <div class="card-header tete-carte">Mon Analyse Réflexive sur la compétence CONNECTER</div>
+                <div class="card-body corps-carte">
+                    <p class="card-text">
+                        J’ai appris à mesurer et analyser des signaux avec des générateurs, un multimètre et un oscilloscope, et à voir concrètement l’impact des composants électroniques sur un signal.
+                        J’ai compris l’importance de la rigueur dans les mesures : branchements, réglages et vérifications sont essentiels pour éviter les erreurs.
+                        J’ai découvert la modélisation des systèmes de transmission avec Proteus, ce qui m’a permis de mieux comprendre l’amplitude, le déphasage et le comportement des signaux.En fibre optique, je suis passé de la théorie à la pratique : préparation des fibres, soudure, contrôle et interprétation des mesures OTDR.
+                        Grâce à la pratique, je suis maintenant capable de déployer, tester et valider un lien de transmission fiable.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="tab-pane fade competence" id="programmer" role="tabpanel">
+            <h3>Compétence : Programmer des équipements et applications</h3>
+            
+            <div class="auto-evaluation my-4">
+                <h5>Auto-évaluation : Niveau 3/4 - Maîtrise satisfaisante</h5>
+                <div class="progress barre-progression" style="height: 25px;">
+                    <div class="progress-bar" role="progressbar" style="width: 75%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">3/4</div>
+                </div>
+                <p class="mt-2">À l'aise avec plusieurs langages de programmation et frameworks. Développement d'applications web complètes.</p>
+            </div>
+
+            <div class="card carte mb-4">
+                <div class="card-header tete-carte"><strong>Ce que j'ai réalisé</strong></div>
+                <div class="card-body corps-carte">
+                    <ul>
+                        <li><strong>13.02:</strong>  Lire, exécuter, corriger et modifier un programme</li>
+                        <li><strong>13.03</strong>  Traduire un algorithme, dans un langage et pour un environnement donné</li>
+                    </ul>
+                    <h5 class="mt-3">Preuves de mes compétences dans la compétence programmer :</h5>
+                    <p>Coder en C :</p>
+                    <img src="{{ asset('images/pour_programmer/Coder_C.png') }}" alt="Programmation" class="photo">
+                    <p>Coder en Python :</p>
+                    <img src="{{ asset('images/pour_programmer/Coder_python.png') }}" alt="Programmation" class="photo">
+                </div>
+            </div>
+
+            <div class="card text-white bg-primary carte-reflexive mb-4">
+                <div class="card-header tete-carte">Mon Analyse Réflexive sur la compétence PROGRAMMER</div>
+                <div class="card-body corps-carte">
+                    <p class="card-text">
+                        Avant, je connaissais un peu Python, mais pas le C. Maintenant, je sais lire, comprendre, exécuter et modifier des programmes en C et Python.
+                        J’ai appris à structurer mon code, corriger les erreurs et utiliser le débogage efficacement.
+                        J’ai découvert le développement web avec mon e-portfolio : front-end (HTML, CSS, Bootstrap) et back-end (Symfony).
+                        J’ai travaillé étape par étape à partir d’un cahier des charges et surmonté les difficultés en cherchant des solutions.
+                        Aujourd’hui, je sais programmer et créer un site web complet en comprenant le rôle de chaque technologie.
+                        Prochain objectif : apprendre JavaScript pour rendre mes sites interactifs.
+                    </p>
+                </div>
+            </div>
+
+            <div class="card carte mb-3">
+                <div class="card-body corps-carte">
+                    <h6 class="card-title">Langages de programmation maîtrisés :</h6>
+                    <span class="badge bg-primary etiquette me-1 mb-2">HTML/CSS</span>
+                    <span class="badge bg-primary etiquette me-1 mb-2">Python</span>
+                    <span class="badge bg-primary etiquette me-1 mb-2">SQL</span>
+                </div>
+            </div>
+            
+            <div class="card carte">
+                <div class="card-body corps-carte">
+                    <h6 class="card-title">Applications/outils utilisées lors de mes projets :</h6>
+                    <span class="badge bg-secondary etiquette me-1 mb-2">Symfony</span>
+                    <span class="badge bg-secondary etiquette me-1 mb-2">Bootstrap</span>
+                    <span class="badge bg-secondary etiquette me-1 mb-2">GitHub</span>
+                    <span class="badge bg-secondary etiquette me-1 mb-2">Excel</span>
+                    <span class="badge bg-secondary etiquette me-1 mb-2">Linux</span>
+                    <span class="badge bg-secondary etiquette me-1 mb-2">Machine virtuelle</span>
+                    <span class="badge bg-secondary etiquette me-1 mb-2">Proteus</span>
+                    <span class="badge bg-secondary etiquette me-1 mb-2">Wireshark</span>
+                    <span class="badge bg-secondary etiquette me-1 mb-2">Cisco Packet Tracer</span>
+                    <span class="badge bg-secondary etiquette me-1 mb-2">Visual Studio Code</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
 </div>
-
-<div class="mini carte Connecté">
-    <h3>Compétence : Connecter</h3>
-    <p>Auto-évaluation : 2/4</p>
-    <p>Preuves : TP pare-feu, filtrages, etc.</p>
-</div>
-
-<div class="mini carte Programmer">
-    <h3>Compétence : Programmer</h3>
-    <p>Auto-évaluation : 3/4</p>
-    <p>Preuves : ce site Symfony, projets HTML/CSS/JS…</p>
-</div>
-
-<style>
-    body {
-        font-family: Arial, sans-serif;
-        background-color: #FAFAD2;
-        color: #ffffff;
-    }
-
-    nav a:hover {
-        background-color: rgb(255, 255, 255);
-        border-radius: 5px;
-    }
-</style>
 {% endblock %}
-
