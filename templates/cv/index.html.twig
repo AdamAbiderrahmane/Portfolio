@@ -4,6 +4,12 @@
 
 {% block body %}
 <div class="cv-container">
+    <div class="no-print" style="text-align: right; margin-bottom: 20px;">
+        <button onclick="window.print()" class="btn btn-primary">
+            Imprimer le CV
+        </button>
+    </div>
+
     <header class="cv-header">
         <h1>ADMINISTRATEUR RESEAUX</h1>
     </header>
@@ -134,102 +140,97 @@
 </div>
 
 <style>
+body {
+    background-color: white;
+}
+
+.cv-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.cv-header {
+    text-align: center;
+    margin-bottom: 1.5em;
+    padding: 1em 0;
+    border-bottom: 3px solid #ff5a13;
+}
+
+.cv-header h1 {
+    font-size: 2em;
+    color: #2c3e50;
+    margin: 0;
+}
+
+.cv-layout {
+    display: block;
+}
+
+.cv-sidebar {
+    width: 100%;
+    background: transparent;
+    padding: 0;
+    margin-bottom: 1.5em;
+}
+
+.cv-main {
+    width: 100%;
+}
+
+.cv-bloc {
+    margin-bottom: 1.5em;
+    padding: 1em;
+}
+
+.cv-bloc h2 {
+    font-size: 1.3em;
+    margin-bottom: 0.7em;
+    padding-bottom: 0.5em;
+    border-bottom: 2px solid #ff5a13;
+    color: #2c3e50;
+}
+
+.cv-bloc h3 {
+    font-size: 1.1em;
+    margin-bottom: 0.5em;
+    color: #34495e;
+}
+
+.cv-bloc ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.cv-bloc ul li {
+    font-size: 1em;
+    padding: 0.4em 0;
+    line-height: 1.5;
+}
+
+.cv-bloc p {
+    font-size: 1em;
+    margin: 0.5em 0;
+    line-height: 1.6;
+}
+
+.competence-bloc {
+    padding: 1em;
+    margin-bottom: 1em;
+    border-left: 4px solid #ff5a13;
+    background: #f8f9fa;
+}
+
+@media print {
+    .no-print {
+        display: none;
+    }
+    
     .cv-container {
-        margin: 2em auto;
-        font-family: sans-serif;
+        max-width: 100%;
     }
-
-    .cv-header {
-        text-align: center;
-        padding: 2em 0;
-        border-bottom: 3px solid #ff5a13;
-        margin-bottom: 2em;
-    }
-
-    .cv-header h1 {
-        color: #2c3e50;
-        font-size: 2em;
-        margin: 0;
-    }
-
-    .cv-layout {
-        display: grid;
-        grid-template-columns: 500px 1fr;
-        gap: 2em;
-    }
-
-    .cv-sidebar {
-        background: #f8f9fa;
-        padding: 1.5em;
-        border-radius: 8px;
-    }
-
-    .cv-bloc {
-        margin-bottom: 2em;
-        padding: 1.5em;
-        background: white;
-        border-radius: 8px;
-        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
-
-    .cv-bloc h2 {
-        color: #2c3e50;
-        font-size: 1.3em;
-        margin-bottom: 1em;
-        padding-bottom: 0.5em;
-        border-bottom: 2px solid #f64b12;
-        text-transform: uppercase;
-        font-weight: 700;
-    }
-
-    .cv-bloc h3 {
-        color: #34495e;
-        font-size: 1.1em;
-        margin-bottom: 0.5em;
-    }
-
-    .cv-bloc ul li {
-        padding: 0.4em 0;
-        padding-left: 1.5em;
-        position: relative;
-    }
-
-    .competences-grid {
-        display: grid;
-        gap: 1.5em;
-    }
-
-    .competence-bloc {
-        background: #f8f9fa;
-        padding: 1em;
-        border-radius: 6px;
-        border-left: 4px solid #000000;
-    }
-
-    .Bagages-de-competence {
-        display: flex;
-        flex-wrap: wrap;
-    }
-
-    .competences {
-        color: rgb(0, 0, 0);
-        padding: 0.5em 1em;
-    }
-
-    .formulaire-container {
-        max-width: 700px;
-        margin: 3em auto;
-        padding: 20px;
-    }
-    
-    fieldset {
-        border: none;
-    }
-    
-    legend {
-        font-size: 2rem;
-        font-weight: bold;
-        margin-bottom: 1.5rem;
-    }
+}
 </style>
 {% endblock %}

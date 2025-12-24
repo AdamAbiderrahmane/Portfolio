@@ -4,50 +4,114 @@
 
 {% block body %}
 
+<div class="container mt-5">
     <div class="formulaire-container">
-    <form>
-        <fieldset>
-            <legend>Formulaire d'inscription</legend>
-            
-            <div>
-                <label for="nom" class="form-label">Nom</label>
-                <input type="text" class="form-control" id="nom" placeholder="Entrez votre Nom...">
-            </div>
-            
-            <div>
-                <label for="prenom" class="form-label">Prénom</label>
-                <input type="text" class="form-control" id="prenom" placeholder="Entrez votre Prénom...">
-            </div>
-            
-            <div>
-                <label for="email" class="form-label">Email</label>
-                <input type="email" class="form-control" id="email" placeholder="XX@gmail.com">
-            </div>
-            
-            <div>
-                <label for="telephone" class="form-label">Téléphone</label>
-                <input type="tel" class="form-control" id="telephone" placeholder="+ 33 XX XX XX XX">
-            </div>
+        <form id="contactForm">
+            <fieldset>
+                <legend>Formulaire d'inscription</legend>
+                
+                <div class="mb-3">
+                    <label for="nom" class="form-label">Nom *</label>
+                    <input type="text" class="form-control" id="nom" placeholder="Entrez votre Nom...">
+                    <div class="invalid-feedback">Le nom est obligatoire</div>
+                </div>
+                
+                <div class="mb-3">
+                    <label for="prenom" class="form-label">Prénom *</label>
+                    <input type="text" class="form-control" id="prenom" placeholder="Entrez votre Prénom...">
+                    <div class="invalid-feedback">Le prénom est obligatoire</div>
+                </div>
+                
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email *</label>
+                    <input type="email" class="form-control" id="email" placeholder="XX@gmail.com">
+                    <div class="invalid-feedback">L'email est obligatoire et doit être valide</div>
+                </div>
+                
+                <div class="mb-3">
+                    <label for="telephone" class="form-label">Téléphone *</label>
+                    <input type="tel" class="form-control" id="telephone" placeholder="+ 33 XX XX XX XX">
+                    <div class="invalid-feedback">Le téléphone est obligatoire</div>
+                </div>
 
-            <a href="{{ asset('cv/CV_MonNom.pdf') }}" class="btn btn-primary" download>
-                Télécharger le CV (PDF)
-            </a>
-            <a href="{{ asset('cv/CV_MonNom.docx') }}" class="btn btn-primary" download>
-                Télécharger le CV (docx)
-            </a>
-        </fieldset>
-    </form>
+                <div class="mt-4">
+                    <button type="button" class="btn btn-primary me-2" id="btnPDF">
+                        Télécharger le CV (PDF)
+                    </button>
+                    <button type="button" class="btn btn-primary" id="btnDOCX">
+                        Télécharger le CV (DOCX)
+                    </button>
+                </div>
+            </fieldset>
+        </form>
+    </div>
 </div>
+
 <style>
-    .example-wrapper { 
-        margin: 1em auto; 
-        max-width: 800px; 
-        width: 95%; 
-        font: 18px,1.5 sans-serif; 
-    }
-    .example-wrapper code { 
-        background: #F5F5F5; 
-        padding: 2px 6px; 
-    }
+.formulaire-container {
+    max-width: 600px;
+    margin: auto;
+    background-color: white;
+    padding: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
 </style>
+<script>
+document.getElementById('btnPDF').addEventListener('click', function() {
+    if (validerFormulaire()) {
+        window.location.href = "{{ asset('cv/CV_ABIDERRAHMANE_ADAM.pdf') }}";
+    }
+});
+
+document.getElementById('btnDOCX').addEventListener('click', function() {
+    if (validerFormulaire()) {
+        window.location.href = "{{ asset('cv/CV_ABIDERRAHMANE_ADAM.docx') }}";
+    }
+});
+
+function validerFormulaire() {
+    let toutEstBon = true;
+    
+    const nom = document.getElementById('nom');
+    if (nom.value.trim() === '') {
+        nom.classList.add('is-invalid');
+        nom.classList.remove('is-valid');
+        toutEstBon = false;
+    } else {
+        nom.classList.add('is-valid');
+        nom.classList.remove('is-invalid');
+    }
+    
+    const prenom = document.getElementById('prenom');
+    if (prenom.value.trim() === '') {
+        prenom.classList.add('is-invalid');
+        prenom.classList.remove('is-valid');
+        toutEstBon = false;
+    } else {
+        prenom.classList.add('is-valid');
+        prenom.classList.remove('is-invalid');
+    }
+    const email = document.getElementById('email');
+    if (email.value.trim() === '' || !email.value.includes('@')) {
+        email.classList.add('is-invalid');
+        email.classList.remove('is-valid');
+        toutEstBon = false;
+    } else {
+        email.classList.add('is-valid');
+        email.classList.remove('is-invalid');
+    }
+    
+    const telephone = document.getElementById('telephone');
+    if (telephone.value.trim() === '') {
+        telephone.classList.add('is-invalid');
+        telephone.classList.remove('is-valid');
+        toutEstBon = false;
+    } else {
+        telephone.classList.add('is-valid');
+        telephone.classList.remove('is-invalid');
+    }
+    
+    return toutEstBon;
+}
+</script>
 {% endblock %}
