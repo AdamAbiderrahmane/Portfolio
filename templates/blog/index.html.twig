@@ -28,13 +28,13 @@
                 <label for="telephone" class="form-label">Téléphone</label>
                 <input type="tel" class="form-control" id="telephone" placeholder="+ 33 XX XX XX XX">
             </div>
-            
-            <div>
-                <label for="cv" class="form-label">CV (PDF ou DOCX)</label>
-                <input class="form-control" type="file" id="cv" accept=".pdf,.docx">
-            </div>
-            
-            <button type="submit" class="btn btn-primary">Envoyer l'inscription</button>
+
+            <a href="{{ asset('cv/CV_MonNom.pdf') }}" class="btn btn-primary" download>
+                Télécharger le CV (PDF)
+            </a>
+            <a href="{{ asset('cv/CV_MonNom.docx') }}" class="btn btn-primary" download>
+                Télécharger le CV (docx)
+            </a>
         </fieldset>
     </form>
 </div>
@@ -43,7 +43,7 @@
         margin: 1em auto; 
         max-width: 800px; 
         width: 95%; 
-        font: 18px/1.5 sans-serif; 
+        font: 18px,1.5 sans-serif; 
     }
     .example-wrapper code { 
         background: #F5F5F5; 
