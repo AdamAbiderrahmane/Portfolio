@@ -3,42 +3,37 @@
 {% block title %}Contact{% endblock %}
 
 {% block body %}
-
-<div class="container mt-5">
+<div class="container">
     <div class="formulaire-container">
-        <form id="contactForm">
+        <form method="POST">
             <fieldset>
-                <legend>Formulaire d'inscription</legend>
+                <legend>Formulaire d'inscription (tous les champs sont obligatoires)</legend>
                 
-                <div class="mb-3">
-                    <label for="nom" class="form-label">Nom *</label>
-                    <input type="text" class="form-control" id="nom" placeholder="Entrez votre Nom...">
-                    <div class="invalid-feedback">Le nom est obligatoire</div>
+                <div class="champs">
+                    <label for="nom" class="form-label">Nom</label>
+                    <input type="text" name="nom" class="form-control" id="nom" placeholder="Entrez votre Nom..." required>
                 </div>
                 
-                <div class="mb-3">
-                    <label for="prenom" class="form-label">Prénom *</label>
-                    <input type="text" class="form-control" id="prenom" placeholder="Entrez votre Prénom...">
-                    <div class="invalid-feedback">Le prénom est obligatoire</div>
+                <div class="champs">
+                    <label for="prenom" class="form-label">Prénom</label>
+                    <input type="text" name="prenom" class="form-control" id="prenom" placeholder="Entrez votre Prénom..." required>
                 </div>
                 
-                <div class="mb-3">
-                    <label for="email" class="form-label">Email *</label>
-                    <input type="email" class="form-control" id="email" placeholder="XX@gmail.com">
-                    <div class="invalid-feedback">L'email est obligatoire et doit être valide</div>
+                <div class="champs">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" name="email" class="form-control" id="email" placeholder="XX@gmail.com" required>
                 </div>
                 
-                <div class="mb-3">
-                    <label for="telephone" class="form-label">Téléphone *</label>
-                    <input type="tel" class="form-control" id="telephone" placeholder="+ 33 XX XX XX XX">
-                    <div class="invalid-feedback">Le téléphone est obligatoire</div>
+                <div class="champs">
+                    <label for="telephone" class="form-label">Téléphone</label>
+                    <input type="tel" name="telephone" class="form-control" id="telephone" placeholder="+33 . .. .. .." required>
                 </div>
 
-                <div class="mt-4">
-                    <button type="button" class="btn btn-primary me-2" id="btnPDF">
+                <div class="telechargement">
+                    <button type="submit" name="format" value="pdf" class="btn btn-primary me-2">
                         Télécharger le CV (PDF)
                     </button>
-                    <button type="button" class="btn btn-primary" id="btnDOCX">
+                    <button type="submit" name="format" value="docx" class="btn btn-primary">
                         Télécharger le CV (DOCX)
                     </button>
                 </div>
@@ -56,62 +51,4 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 </style>
-<script>
-document.getElementById('btnPDF').addEventListener('click', function() {
-    if (validerFormulaire()) {
-        window.location.href = "{{ asset('cv/CV_Mets_ton_nom.pdf') }}";
-    }
-});
-
-document.getElementById('btnDOCX').addEventListener('click', function() {
-    if (validerFormulaire()) {
-        window.location.href = "{{ asset('cv/CV_Mets_ton_nom.docx') }}";
-    }
-});
-
-function validerFormulaire() {
-    let toutEstBon = true;
-    
-    const nom = document.getElementById('nom');
-    if (nom.value.trim() === '') {
-        nom.classList.add('is-invalid');
-        nom.classList.remove('is-valid');
-        toutEstBon = false;
-    } else {
-        nom.classList.add('is-valid');
-        nom.classList.remove('is-invalid');
-    }
-    
-    const prenom = document.getElementById('prenom');
-    if (prenom.value.trim() === '') {
-        prenom.classList.add('is-invalid');
-        prenom.classList.remove('is-valid');
-        toutEstBon = false;
-    } else {
-        prenom.classList.add('is-valid');
-        prenom.classList.remove('is-invalid');
-    }
-    const email = document.getElementById('email');
-    if (email.value.trim() === '' || !email.value.includes('@')) {
-        email.classList.add('is-invalid');
-        email.classList.remove('is-valid');
-        toutEstBon = false;
-    } else {
-        email.classList.add('is-valid');
-        email.classList.remove('is-invalid');
-    }
-    
-    const telephone = document.getElementById('telephone');
-    if (telephone.value.trim() === '') {
-        telephone.classList.add('is-invalid');
-        telephone.classList.remove('is-valid');
-        toutEstBon = false;
-    } else {
-        telephone.classList.add('is-valid');
-        telephone.classList.remove('is-invalid');
-    }
-    
-    return toutEstBon;
-}
-</script>
 {% endblock %}
